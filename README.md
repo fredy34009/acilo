@@ -2,7 +2,7 @@
  _App para administrar el Acilo de ancianos Esperanza Santa Ana como parte de la materia Diseño y Programacion de Sotfware Multiplataforma DPS941 de la Universidad Don Bosco_
 
 ## Pre-requisitos
-* Haber selecciona un IDE de desarrollo en este caso Visual Studio Code, tener instalado Node Js asi como el modulo express y expo react native 
+* Haber selecciona un IDE de desarrollo en este caso Visual Studio Code, tener instalado Node Js asi como el modulo express y expo react native , Cuenta google para relizar la autenticacion a travez de google
 
 ## Herramientas ⚙
 * [Visual Studio Code] https://code.visualstudio.com/download - IDE de desarrollo
