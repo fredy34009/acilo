@@ -14,7 +14,13 @@ Antes de comenzar, asegurese de tener instalado:
 * Visual Studio Code
 * Node JS y modulo Express
 * Expo React-Native
-* Git
+* GitHub Desktop
+
+1. Seleccionar una carpeta de su equipo local donde clonará y almacenará el repositorio
+2. Una vez seleccionada la carpeta, abra "GitHub Desktop" y clonar https://github.com/fredy34009/acilo Esto le permitirá conectarse de una vez al repositorio.
+3. Crear una rama de colaboración para poder agregar los cambios al repositorio Github.
+4. Una vez este conectado al repositorio y haya creado su rama, puede comenzar a colaborar desde su equipo local, para lo que será necesario abrir el proyecto desde su Android Studio.
+5. Realice las modificaciones necesarias 
 
 ## Autor 🖊
 * **Fredy Antonio Alfaro Santos AS231934**
