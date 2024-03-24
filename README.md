@@ -20,7 +20,7 @@ Antes de comenzar, asegurese de tener instalado:
 2. Una vez seleccionada la carpeta, abra "GitHub Desktop" y clonar https://github.com/fredy34009/acilo Esto le permitirá conectarse de una vez al repositorio.
 3. Crear una rama de colaboración para poder agregar los cambios al repositorio Github.
 4. Una vez este conectado al repositorio y haya creado su rama, puede comenzar a colaborar desde su equipo local, para lo que será necesario abrir el proyecto desde su Android Studio.
-5. Realice las modificaciones necesarias 
+5. Realice las modificaciones necesarias, realizar commit y push al repositorio para relizar los cambios
 
 ## Autor 🖊
 * **Fredy Antonio Alfaro Santos AS231934**
