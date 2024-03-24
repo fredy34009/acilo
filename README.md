@@ -1,5 +1,8 @@
-# Acilo
- Acilo de ancianos Esperanza Santa Ana
+# Acilo Ezperanza Santa Ana
+ _App para administrar el Acilo de ancianos Esperanza Santa Ana como parte de la materia Diseño y Programacion de Sotfware Multiplataforma DPS941 de la Universidad Don Bosco_
+
+## Pre-requisitos
+*Haber selecciona un IDE de desarrollo en este caso Visual Studio Code, tener instalado Node Js asi como el modulo express y expo react native 
 
 ## Herramientas ⚙
 * [Visual Studio Code] https://code.visualstudio.com/download - IDE de desarrollo
@@ -33,7 +36,9 @@ Que establece:
 Usted es libre de:
 
 Compartir — copiar y redistribuir el material en cualquier medio o formato.
+
 Adaptar — remezclar, transformar y construir a partir del material.
+
 La licenciante no puede revocar estas libertades en tanto usted siga los términos de la licencia.
 
 ## Enlaces de interés 🔗
