@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "AppAcilo",
+    "slug": "AppAcilo",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "permission": ["RECORD_AUDIO","ACCESS_NETWORK_STATE","ACCESS_WIFI_STATE","INTERNET"]
+    }
+  },
+  "name": "AppAcilo"
+}
