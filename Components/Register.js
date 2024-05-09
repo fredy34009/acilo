@@ -67,7 +67,7 @@ const Register = ({ navigation }) => {
             <TouchableOpacity style={styles.button} onPress={() => registrar()}>
                 <Text style={styles.textStyleButton}>Registrar</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('Iniciar Sesion')}>
+            <TouchableOpacity style={styles.button2} onPress={() => navigation.navigate('Iniciar Session')}>
                 <Text style={styles.textStyleButton}>Iniciar</Text>
             </TouchableOpacity>
             {show &&

@@ -12,20 +12,17 @@ import NuevaCita from "./NuevaCita";
 import Index from "./Login/Index";
 import Register from "./Register";
 import HistorialDetalle from "./HistorialDetalle";
+import SplashScreen from "./SplashScreen";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 const BarraNav = () => {
     return (
-
         <Stack.Navigator>
-            <Stack.Screen name="Iniciar Sesion" component={Index} />
+            <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="Iniciar Session" component={Index} />
+            <Stack.Screen name="Menu" component={Tabs} options={{ headerShown: false }} />
             <Stack.Screen name="Registrar" component={Register} />
-            <Stack.Screen
-                name="Menu"
-                component={Tabs}
-                options={{ headerShown: false }}
-            />
             <Stack.Screen name="Nuevo Paciente" component={NuevoPaciente} />
             <Stack.Screen name="Nuevo Doctor" component={NuevoDoctor} />
             <Stack.Screen name="Agendar Cita" component={NuevaCita} />

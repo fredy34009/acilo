@@ -18,7 +18,7 @@ const Citas = ({ navigation }) => {
         navigation.setOptions({
             headerRight: () => {
                 return (
-                    <Text onPress={() => navigation.navigate('Iniciar Sesion')} >SALIR
+                    <Text onPress={() => navigation.navigate('Iniciar Session')} >SALIR
                         <Icon name="logout" type="material" />
                     </Text>
                 )

@@ -12,13 +12,18 @@ const Index = ({ navigation }) => {
             usuario: usuario,
             pass: pass
         }
-        const respuesta = await nuevoLogin(Usuario);
-        if (respuesta.length>0) {
-            navigation.navigate('Menu');
-        }
-        else {
-            Alert.alert('Error usuario no valido')
-        }
+        const respuesta = await nuevoLogin(Usuario).then(function (response) {
+            console.log('Respuesta ',response)
+            if(response.length > 0)
+                {
+                    navigation.navigate('Menu');
+                }
+                else{
+                    Alert.alert('Error usuario no valido')
+                }
+        }).catch((error )=>{
+            Alert.alert('Ha ocurido un Error');
+        });
     }
     return (
         <View style={style.content}>
