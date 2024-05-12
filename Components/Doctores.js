@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, TextInput, FlatList, TouchableOpacity } from "r
 import { Icon } from "react-native-elements";
 import Boton from "./componentes/Boton";
 import BotonBuscar from "./componentes/BotonBuscar";
-import { eliminarDoctor, getDoctores, updateDoctor } from "../api/Services";
+import { eliminarDoctor, getDocotoresNombre, getDoctores, updateDoctor } from "../api/Services";
 import ModalEliminar from "./componentes/ModalEliminar";
 import ModalActualizarPacDoc from "./componentes/ModalActualizarPacDoc";
 
@@ -61,7 +61,7 @@ const Doctores = ({ navigation }) => {
     }
     //Metodo de buscar un paciente
     const buscarPacienteNombre = async () => {
-        setPacientes(await getPacientesNombre(paciente));
+        setDoctores(await getDocotoresNombre(doctor));
     }
     //Metodo para refrescar la pagina principal
     const refresh = async () => {
