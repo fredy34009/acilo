@@ -6,7 +6,7 @@ import { getDoctoresForSelect, getPacientesForSelect, nuevaCita } from "../api/S
 import ModalFecha from "./componentes/ModalFecha";
 import ModalHora from "./componentes/ModalHora";
 
-const NuevaCita = ({ navigation }) => {
+const NuevaCita = () => {
     useEffect(() => {
         async function fethData() {
             setPacientes(await getPacientesForSelect());
@@ -17,13 +17,20 @@ const NuevaCita = ({ navigation }) => {
     }, [])
 
     const [pacientes, setPacientes] = useState([]);
-    const [paciente, setPaciente] = useState('');
+    const [paciente, setPaciente] = useState(null);
     const [doctores, setDoctores] = useState([]);
-    const [doctor, setDoctor] = useState('');
+    const [doctor, setDoctor] = useState(null);
     const [fecha, setFecha] = useState('');
     const [hora, setHora] = useState('');
     const [numero, setNumero] = useState('');
 
+    const vaciar = () => {
+        setPaciente(null)
+        setDoctor(null),
+        setFecha('')
+        setHora('')
+        generateRandomNumber();
+    }
 
     //Genera un numero random para la cita
     const generateRandomNumber = () => {
@@ -36,20 +43,26 @@ const NuevaCita = ({ navigation }) => {
     };
 
     const registrar = async () => {
-        const Cita = {
-            'id_paciente': paciente,
-            'id_doctor': doctor,
-            'fecha': fecha,
-            'hora': hora,
-            'completa': 'No',
-            'numero': numero,
-        }
-        const respuesta = await nuevaCita(Cita);
-        if (respuesta.estado === 200) {
-            Alert.alert('Cita creada\npara: ' + fecha + ' \t' + hora);
+        if (doctor === '' || paciente === '' || fecha === '' || hora === '' || numero < 0) {
+            Alert.alert('Error llena todos los campos')
         }
         else {
-            Alert.alert('Error al crear la cita')
+            const Cita = {
+                'id_paciente': paciente,
+                'id_doctor': doctor,
+                'fecha': fecha,
+                'hora': hora,
+                'completa': 'No',
+                'numero': numero,
+            }
+            const respuesta = await nuevaCita(Cita);
+            if (respuesta.estado === 200) {
+                Alert.alert('Cita creada\npara: ' + fecha + ' \t' + hora);
+                vaciar();
+            }
+            else {
+                Alert.alert('Error al crear la cita')
+            }
         }
     }
     const [show, setShow] = useState(false);
@@ -77,7 +90,6 @@ const NuevaCita = ({ navigation }) => {
             <SelectList
                 setSelected={(val) => setPaciente(val)}
                 data={pacientes}
-                save="key"
                 placeholder="Seleccione una opcion"
                 searchPlaceholder="Buscar paciente"
             />
@@ -85,7 +97,6 @@ const NuevaCita = ({ navigation }) => {
             <SelectList
                 setSelected={(val) => setDoctor(val)}
                 data={doctores}
-                save="key"
                 placeholder="Seleccione una opcion"
                 searchPlaceholder="Buscar doctor"
             />

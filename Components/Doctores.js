@@ -32,8 +32,8 @@ const Doctores = ({ navigation }) => {
     const [doctor, setDoctor] = useState('');
 
     //variables para la edicion de un doctor
-    const [nombres, setNombres] = useState("");
-    const [apellidos, setApellidos] = useState("");
+    const [nombres, setNombres] = useState('');
+    const [apellidos, setApellidos] = useState('');
     const [dui, setDui] = useState('')
     const [direccion, setDireccion] = useState('')
     const [nacimiento, setNacimiento] = useState('');

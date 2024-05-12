@@ -4,15 +4,22 @@ import FormularioRegistro from "./FormularioRegistro";
 import { nuevoPaciente } from "../api/Services";
 import moment from 'moment';
 
-const NuevoPaciente = ({ navigation }) => {
+const NuevoPaciente = () => {
     const formattedDate = moment(new Date()).format('YYYY/MM/DD'); // Formato deseado
-    const [nombres, setNombres] = useState("");
-    const [apellidos, setApellidos] = useState("");
+    const [nombres, setNombres] = useState('');
+    const [apellidos, setApellidos] = useState('');
     const [dui, setDui] = useState('')
     const [direccion, setDireccion] = useState('')
     const [nacimiento, setNacimiento] = useState('');
     const [registro, setRegistro] = useState(''+formattedDate);
 
+    const vaciar=()=>{
+        setNombres('')
+        setApellidos('')
+        setDui('')
+        setDireccion('')
+        setNacimiento('')
+    }
     //Validar dui
     const validarDui = () => {
         const duiRegex = /^\d{8}-\d$/;
@@ -40,6 +47,7 @@ const NuevoPaciente = ({ navigation }) => {
                 const x=await nuevoPaciente(Paciente);
                 if(x.estado===200)
                 {
+                    vaciar();
                     Alert.alert('Paciente registrado')
                 }
                 else{
@@ -61,8 +69,14 @@ const NuevoPaciente = ({ navigation }) => {
                 dui={e => setDui(e)}
                 nacimiento={e=>setNacimiento(e)}
                 direccion={e => setDireccion(e)}
+                registro={registro}
+
+                valuenombres={nombres}
+                valueApellidos={apellidos}
+                valueDui={dui}
+                valueDireccion={direccion}
                 valueNacimiento={nacimiento}
-                registro={registro} textoBoton="Guardar"/>
+                textoBoton="Guardar"/>
         </View>
     );
 }

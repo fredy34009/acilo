@@ -4,7 +4,7 @@ import FormularioRegistro from "./FormularioRegistro";
 import moment from 'moment';
 import { nuevoDoctor } from "../api/Services";
 
-const NuevoDoctor = ({ navigation }) => {
+const NuevoDoctor = () => {
     const formattedDate = moment(new Date()).format('YYYY/MM/DD'); // Formato deseado
     const [nombres, setNombres] = useState("");
     const [apellidos, setApellidos] = useState("");
@@ -12,7 +12,14 @@ const NuevoDoctor = ({ navigation }) => {
     const [direccion, setDireccion] = useState('')
     const [nacimiento, setNacimiento] = useState('');
     const [registro, setRegistro] = useState('' + formattedDate);
-    //Validar dui
+
+    const vaciar=()=>{
+        setNombres('')
+        setApellidos('')
+        setDui('')
+        setDireccion('')
+        setNacimiento('')
+    }
     //Validar dui
     const validarDui = () => {
         const duiRegex = /^\d{8}-\d$/;
@@ -22,22 +29,14 @@ const NuevoDoctor = ({ navigation }) => {
             return false
         }
     };
-    //invertir fecha 
-    function invertirCadena(cad) {
-        var separarCadena = cad.split("");
-        var invertirArreglo = separarCadena.reverse();
-        var unirArreglo = invertirArreglo.join("");
-        console.log(unirArreglo)
-        return unirArreglo;
-    }
+
     const registrar = async() => {
         if (apellidos === "" || apellidos == null || nombres == "" || nombres == null
-            || direccion == "" || direccion == null) {
+            || direccion == "" || direccion == null || nacimiento==='') {
             Alert.alert('Error llena todos los campos');
         }
         else {
             if (validarDui()) {
-
                 const Doctor = {
                     nombres: nombres,
                     apellidos: apellidos,
@@ -46,8 +45,15 @@ const NuevoDoctor = ({ navigation }) => {
                     registro: registro,
                     nacimiento: nacimiento
                 }
-                await nuevoDoctor(Doctor);
-                console.log(Doctor);
+                const x=await nuevoDoctor(Doctor);
+                if(x.estado===200)
+                {
+                    Alert.alert('Doctor registrado')
+                    vaciar();
+                }
+                else{
+                    Alert.alert('Error '+x.estado)
+                }
             } else {
                 Alert.alert('Formato de DUI invalido\nEjemplo: 12345678-9')
             }
@@ -63,6 +69,10 @@ const NuevoDoctor = ({ navigation }) => {
                 dui={e => setDui(e)}
                 direccion={e => setDireccion(e)}
                 nacimiento={e => setNacimiento(e)}
+                valuenombres={nombres}
+                valueApellidos={apellidos}
+                valueDui={dui}
+                valueDireccion={direccion}
                 valueNacimiento={nacimiento}
                 registro={registro}
                 textoBoton="Guardar" />

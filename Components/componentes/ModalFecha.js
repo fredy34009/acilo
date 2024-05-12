@@ -1,10 +1,10 @@
-import { StyleSheet, Pressable, Text, Modal, View } from "react-native";
+import { StyleSheet, Text, Modal, View } from "react-native";
 import DatePicker from 'react-native-modern-datepicker';
 
 const ModalFecha = (props) => {
     return (
         <Modal style={styles.colorFondo}
-            animationType="slide"
+            animationType="fade"
             transparent={true}
             visible={props.modalVisible}
             onRequestClose={props.cancelar}
