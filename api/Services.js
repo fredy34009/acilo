@@ -29,6 +29,12 @@ export const getPacientesNombre = async (paciente) => {
     console.log('datos url ' + APi_URL + 'buscar?usuario=' + paciente)
     return response.data;
 }
+export const getDocotoresNombre = async (doctor) => {
+    const response = await axios.get(APi_URL_DOCTOR + 'buscar?usuario=' + doctor + '%')
+    console.log('datos filtrados ' + response.data)
+    console.log('datos url ' + APi_URL_DOCTOR + 'buscar?usuario=' + doctor)
+    return response.data;
+}
 export const getCitasByNumero = async (numero) => {
     const response = await axios.get(APi_URL_CITAS + 'buscar?usuario=' + numero + '%')
     console.log('datos filtrados ' + response.data)
