@@ -46,3 +46,5 @@ La licenciante no puede revocar estas libertades en tanto usted siga los términ
 * [Tablero en Trello] https://trello.com/invite/b/N5czoLu7/ATTI699a2a2558202b4a4f160fb0b437fcf1C51F1392/app-acilo-esperanza
 * [Mockups- figma] - https://www.figma.com/file/i6NbiInXh7ZxnYbl9gUJ6O/Untitled?type=design&node-id=15%3A55&mode=design&t=8HcFRn6jrEty8PcD-1
 * [Casos de uso] - https://drive.google.com/file/d/1VTbPrdTt5bhFKp2Zlzk4IHwlusdUhrvN/view?usp=sharing
+* [Manual Tecnico] - https://drive.google.com/file/d/1HAZt5CFe_PU5yasNNQzx-59_ClAo4jJy/view?usp=sharing
+* [Manual Usuario] - https://drive.google.com/file/d/1V27sJ2bfrTCmSEkrlXK8OyhrmltV0OZX/view?usp=sharing
