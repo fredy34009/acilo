@@ -1,6 +1,6 @@
 {
     "name": "AppAcilo",
-    "slug": "AppAcilo",
+    "slug": "acilo",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
