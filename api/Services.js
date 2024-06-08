@@ -1,6 +1,6 @@
 import axios from "axios";
-//const API="https://apiacilo-misty-paper-3176.fly.dev"
-const API = "http://192.168.1.145:3000"
+const API = " https://apiacilofinal2.fly.dev"
+//const API = "http://192.168.1.145:3000"
 const APi_URL = API + "/paciente/";
 const APi_URL_DOCTOR = API + "/doctor/";
 const APi_URL_CITAS = API + "/citas/";
@@ -100,11 +100,15 @@ export const updateDoctor = async (id, o) => {
     return response.data;
 }
 export const updatePaciente = async (id, o) => {
-    const response = await axios.put(APi_URL+ 'editar/' + id, o)
+    const response = await axios.put(APi_URL + 'editar/' + id, o)
     console.log(response.data);
     return response.data;
 }
-
+export const updateCita = async (id, o) => {
+    const response = await axios.put(APi_URL_CITAS + 'editar/' + id, o)
+    console.log(response.data);
+    return response.data;
+}
 //Metodos ver Historial 
 export const getHistorial = async () => {
     const response = await axios.get(API + '/historial/ver')

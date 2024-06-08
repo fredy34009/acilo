@@ -1,4 +1,4 @@
-rootProject.name = 'AppAcilo'
+rootProject.name = 'nombre_del_proyecto'
 
 dependencyResolutionManagement {
   versionCatalogs {

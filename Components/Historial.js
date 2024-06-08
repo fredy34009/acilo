@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Pressable } from "react-native";
+import { View, Text, StyleSheet, FlatList, Pressable } from "react-native";
 import { Icon } from "react-native-elements";
 import BotonBuscar from "./componentes/BotonBuscar";
 import { getHistorial, getHistorialByNombresOrNumero } from "../api/Services";

@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Alert, Pressable } from "react-native";
-import { View, Text, StyleSheet, TextInput, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import { Icon } from "react-native-elements";
 import Boton from "./componentes/Boton";
 import BotonBuscar from "./componentes/BotonBuscar";

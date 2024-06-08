@@ -103,7 +103,7 @@ const Citas = ({ navigation }) => {
                         </TouchableOpacity>
                         <Pressable
                             style={styles.buttonedit}
-                            onPress={() => navigation.navigate('Nuevo Doctor')}>
+                            onPress={() => navigation.navigate('Editar Cita',{ data: item })}>
                             <Icon name="edit" type="material" />
                         </Pressable>
                     </View>

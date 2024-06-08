@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Button, TouchableOpacity, Alert } from "react-native";
+import { View, Text, StyleSheet, Alert } from "react-native";
 import { useState } from "react";
 import FormularioRegistro from "./FormularioRegistro";
 import { nuevoPaciente } from "../api/Services";

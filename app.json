@@ -1,5 +1,4 @@
 {
-  "expo": {
     "name": "AppAcilo",
     "slug": "AppAcilo",
     "version": "1.0.0",
@@ -7,8 +6,12 @@
       "**/*"
     ],
     "android": {
-      "permission": ["RECORD_AUDIO","ACCESS_NETWORK_STATE","ACCESS_WIFI_STATE","INTERNET"]
+      "package": "com.fredy34009.AppAcilo"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d84f339d-121b-4cc0-bfe1-927be8801b76"
+      }
     }
-  },
-  "name": "AppAcilo"
+
 }

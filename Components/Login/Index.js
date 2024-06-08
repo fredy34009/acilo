@@ -1,32 +1,41 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { StyleSheet, Text, TextInput, View, Pressable, Alert, TouchableOpacity } from "react-native"
 import { nuevoLogin } from "../../api/Services";
+import NetInfo from "@react-native-community/netinfo";
 
 const Index = ({ navigation }) => {
 
     const [usuario, setUsuario] = useState('');
     const [pass, setPass] = useState('');
-
+    useEffect(() => {
+        requestWifiPermission();
+    }, []);
+    const requestWifiPermission = NetInfo.addEventListener((state) => {
+        if (state.isConnected === false) {
+            Alert.alert('No estas Conectado a Internet')
+        }
+    })
     const login = async () => {
         const Usuario = {
             usuario: usuario,
             pass: pass
         }
         const respuesta = await nuevoLogin(Usuario).then(function (response) {
-            console.log('Respuesta ',response)
-            if(response.length > 0)
-                {
-                    navigation.navigate('Menu');
-                }
-                else{
-                    Alert.alert('Error usuario no valido')
-                }
-        }).catch((error )=>{
-            Alert.alert('Ha ocurido un Error');
+            console.log('Respuesta ', response)
+            if (response.length > 0) {
+                navigation.navigate('Menu');
+            }
+            else {
+                Alert.alert('Error usuario no valido')
+            }
+        }).catch((error) => {
+            Alert.alert('Ha ocurido un Error ' + error.response.data);
+            Alert.alert('Ha ocurido un Error ' + error.response.status);
         });
     }
     return (
         <View style={style.content}>
+            <Text></Text>
             <View style={style.banner}>
                 <Text style={style.title}>Acilo Santa Ana</Text>
             </View>

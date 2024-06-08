@@ -1,5 +1,4 @@
 import { StyleSheet, Pressable, Text, Modal, View, TextInput, TouchableOpacity } from "react-native";
-import FormularioRegistro from "../FormularioRegistro";
 import { useState } from "react";
 import ModalFecha from "./ModalFecha";
 

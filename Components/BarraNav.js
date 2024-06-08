@@ -13,6 +13,7 @@ import Index from "./Login/Index";
 import Register from "./Register";
 import HistorialDetalle from "./HistorialDetalle";
 import SplashScreen from "./SplashScreen";
+import EditarCita from "./EditarCita";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -26,6 +27,7 @@ const BarraNav = () => {
             <Stack.Screen name="Nuevo Paciente" component={NuevoPaciente} />
             <Stack.Screen name="Nuevo Doctor" component={NuevoDoctor} />
             <Stack.Screen name="Agendar Cita" component={NuevaCita} />
+            <Stack.Screen name="Editar Cita" component={EditarCita} />
             <Stack.Screen name="Detalles" component={HistorialDetalle} />
         </Stack.Navigator>
     )
