@@ -49,3 +49,5 @@ La licenciante no puede revocar estas libertades en tanto usted siga los términ
 * [Manual Tecnico] - https://drive.google.com/file/d/1HAZt5CFe_PU5yasNNQzx-59_ClAo4jJy/view?usp=sharing
 * [Manual Usuario] - https://drive.google.com/file/d/1V27sJ2bfrTCmSEkrlXK8OyhrmltV0OZX/view?usp=sharing
 * [Link Video Demostrativo] - https://udbedu-my.sharepoint.com/:v:/g/personal/as231934_alumno_udb_edu_sv/ESNOJFc58KZLkekiclX055YBBd0mk9gI4XWk7m0ALiE-hQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZiQAlB
+* [Api a Consumir] - https://apiacilofinal2.fly.dev
+* [Link APK] - https://udbedu-my.sharepoint.com/:u:/g/personal/as231934_alumno_udb_edu_sv/Ed43XQA2lDBKidVdRyiD8zcB8m228-9SE7K4HjQOhP9xGw
